@@ -2,8 +2,8 @@ version: "3.4"
 services:
   pgweb:
     image: sosedoff/pgweb
-    ports:
-      - "8081:8081"
+    expose:
+      - 8081
     environment:
       - DATABASE_URL=postgres://postgres@db:5432/sparrow?sslmode=disable
     depends_on:
